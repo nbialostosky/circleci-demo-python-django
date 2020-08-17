@@ -38,7 +38,7 @@ jobs:
             # massage filepaths into format manage.py test accepts
             TESTFILES=$(echo $TESTFILES | tr "/" "." | sed 's/.py//g')
             echo $TESTFILES
-            pipenv run --parallel-mode manage.py test --noinput --parallel=4 --verbosity=2 $TESTFILES
+            pipenv run manage.py test --verbosity=2 $TESTFILES
       - store_test_results:
           path: test-results
       - store_artifacts:
