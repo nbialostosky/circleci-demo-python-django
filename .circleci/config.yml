@@ -28,6 +28,7 @@ jobs:
             - '.venv'
             - '/usr/local/bin'
             - '/usr/local/lib/python3.6/site-packages'
+      - run: pipenv run python manage.py test
       - run:
           command: |
             # get test files while ignoring __init__ files
@@ -38,7 +39,7 @@ jobs:
             # massage filepaths into format manage.py test accepts
             TESTFILES=$(echo $TESTFILES | tr "/" "." | sed 's/.py//g')
             echo $TESTFILES
-            pipenv run manage.py test --verbosity=2 $TESTFILES
+            pipenv run python manage.py test --verbosity=2 $TESTFILES
       - store_test_results:
           path: test-results
       - store_artifacts:
