@@ -30,7 +30,7 @@ jobs:
             - '/usr/local/lib/python3.6/site-packages'
       - run:
           command: |
-            TESTFILES=$(circleci tests glob "tests/*.py" | circleci tests split --split-by=timings)
+            TESTFILES=$(circleci tests glob "catalog/tests/*.py" | circleci tests split --split-by=timings)
             echo $TESTFILES
             pipenv run python manage.py test -- ${TESTFILES}
       - store_test_results:
