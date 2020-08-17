@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="catalog.tests.test_views.AuthorCreateViewTest-20200817184708" tests="6" file="catalog/tests/test_views.py" time="1.886" timestamp="2020-08-17T18:47:10" failures="0" errors="0" skipped="0">
+	<testcase classname="catalog.tests.test_views.AuthorCreateViewTest" name="test_forbidden_if_logged_in_but_not_correct_permission" time="0.363" timestamp="2020-08-17T18:47:09" file="catalog/tests/test_views.py" line="313"/>
+	<testcase classname="catalog.tests.test_views.AuthorCreateViewTest" name="test_form_date_of_death_initially_set_to_expected_date" time="0.356" timestamp="2020-08-17T18:47:09" file="catalog/tests/test_views.py" line="329"/>
+	<testcase classname="catalog.tests.test_views.AuthorCreateViewTest" name="test_logged_in_with_permission" time="0.321" timestamp="2020-08-17T18:47:10" file="catalog/tests/test_views.py" line="318"/>
+	<testcase classname="catalog.tests.test_views.AuthorCreateViewTest" name="test_redirect_if_not_logged_in" time="0.214" timestamp="2020-08-17T18:47:10" file="catalog/tests/test_views.py" line="309"/>
+	<testcase classname="catalog.tests.test_views.AuthorCreateViewTest" name="test_redirects_to_detail_view_on_success" time="0.315" timestamp="2020-08-17T18:47:10" file="catalog/tests/test_views.py" line="339"/>
+	<testcase classname="catalog.tests.test_views.AuthorCreateViewTest" name="test_uses_correct_template" time="0.315" timestamp="2020-08-17T18:47:10" file="catalog/tests/test_views.py" line="323"/>
+</testsuite>
