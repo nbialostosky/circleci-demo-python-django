@@ -28,7 +28,6 @@ jobs:
             - '.venv'
             - '/usr/local/bin'
             - '/usr/local/lib/python3.6/site-packages'
-      - run: pipenv run python manage.py test
       - run:
           command: |
             # get test files while ignoring __init__ files
