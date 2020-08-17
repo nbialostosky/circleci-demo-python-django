@@ -22,12 +22,14 @@ jobs:
           command: |
             sudo pip install pipenv
             pipenv install
+            pipenv install pytest pytest-django --dev
       - save_cache:
           key: deps10-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
           paths:
             - '.venv'
             - '/usr/local/bin'
             - '/usr/local/lib/python3.6/site-packages'
+      - run: circleci tests glob "*/tests/*.py" | circleci tests split --split-by=timings | xargs python -m pytest
       - run:
           command: |
             TESTFILES=$(circleci tests glob "catalog/tests/*.py" | circleci tests split --split-by=timings)
