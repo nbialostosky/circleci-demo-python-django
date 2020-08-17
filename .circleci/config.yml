@@ -32,7 +32,8 @@ jobs:
           command: |
             TESTFILES=$(circleci tests glob "catalog/tests/*.py" | circleci tests split --split-by=timings)
             echo $TESTFILES
-            pipenv run python manage.py test -- ${TESTFILES}
+            echo "pipenv run python manage.py test --${TESTFILES}"
+            echo "pipenv run python manage.py test -- ${TESTFILES}"
       - store_test_results:
           path: test-results
       - store_artifacts:
